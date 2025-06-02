@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Complaint Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #d32f2f;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #d32f2f;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Customer Complaint Form</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000003qPAH" method="POST">
+
+      <input type="hidden" name="orgid" value="00DgK000003qPAH">
+      <input type="hidden" name="retURL" value="http://www.google.com">
+
+      <!-- Optional debug (uncomment for testing) -->
+      <!-- <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="kaushikdevanshu22@gmail.com"> -->
+
+      <label for="reservationId">Reservation ID</label>
+      <input id="00NgK000012gX9B" name="00NgK000012gX9B" maxlength="18" type="text" placeholder="Enter your reservation ID" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="text" maxlength="80" placeholder="Enter your email address" required>
+
+      <label for="description">Complaint Description</label>
+      <textarea name="description" placeholder="Please describe your issue in detail..." required></textarea>
+
+      <input type="submit" name="submit" value="Submit Complaint">
+    </form>
+  </div>
+</body>
+</html>
